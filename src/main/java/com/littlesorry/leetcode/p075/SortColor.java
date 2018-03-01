@@ -1,4 +1,4 @@
-package com.littlesorry.leetcode;
+package com.littlesorry.leetcode.p075;
 
 /**
  * Created by baofeng.wbf on 2016-05-03 5:57 PM.
