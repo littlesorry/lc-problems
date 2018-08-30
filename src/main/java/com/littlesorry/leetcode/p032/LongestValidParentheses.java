@@ -13,8 +13,8 @@ public class LongestValidParentheses {
 
     public int longestValidParentheses(String s) {
         final char[] chars = s.toCharArray();
-        int result = 0, current = 0, balance = 0;
-        for (int i = 0; i < chars.length; i++) {
+        int result = 0;
+        for (int i = 0, current = 0, balance = 0; i < chars.length; i++) {
             current++;
             if (chars[i] == '(') {
                 balance++;
@@ -29,9 +29,7 @@ public class LongestValidParentheses {
             }
         }
 
-        current = 0;
-        balance = 0;
-        for (int i = chars.length - 1; i >= 0; i--) {
+        for (int i = chars.length - 1, current = 0, balance = 0; i >= 0; i--) {
             current++;
             if (chars[i] == ')') {
                 balance++;
