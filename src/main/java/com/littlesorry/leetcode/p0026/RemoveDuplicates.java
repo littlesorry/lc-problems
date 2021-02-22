@@ -1,4 +1,4 @@
-package com.littlesorry.leetcode.p026;
+package com.littlesorry.leetcode.p0026;
 
 public class RemoveDuplicates {
 

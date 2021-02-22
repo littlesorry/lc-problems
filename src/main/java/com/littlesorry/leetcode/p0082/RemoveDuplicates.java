@@ -1,4 +1,4 @@
-package com.littlesorry.leetcode.p082;
+package com.littlesorry.leetcode.p0082;
 
 import com.littlesorry.leetcode.ListNode;
 

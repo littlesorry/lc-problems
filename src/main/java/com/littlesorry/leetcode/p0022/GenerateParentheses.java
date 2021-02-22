@@ -1,4 +1,4 @@
-package com.littlesorry.leetcode.p022;
+package com.littlesorry.leetcode.p0022;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

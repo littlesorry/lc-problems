@@ -1,6 +1,4 @@
-package com.littlesorry.leetcode.p003;
-
-import lombok.val;
+package com.littlesorry.leetcode.p0003;
 
 /**
  * Created with IntelliJ IDEA.

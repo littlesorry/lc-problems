@@ -1,4 +1,4 @@
-package com.littlesorry.leetcode.p032;
+package com.littlesorry.leetcode.p0032;
 
 /**
  * Created with IntelliJ IDEA.
