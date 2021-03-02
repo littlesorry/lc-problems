@@ -33,4 +33,25 @@ public class LongestSubstringWithoutRepeatingCharacters {
         return result;
     }
 
+    public int lengthOfLongestSubstringSlideWindow(String s) {
+        int current = 0, result = 0, left = 0;
+        int[] charMap = new int[128];
+        char[] chars = s.toCharArray();
+        for (int i = 0; i < chars.length; i++) {
+            current++;
+            while (charMap[chars[i]] > 0) {
+                charMap[chars[left]]--;
+                current--;
+                left++;
+            }
+
+            if (current > result) {
+                result = current;
+            }
+
+            charMap[chars[i]]++;
+        }
+
+        return result;
+    }
 }
