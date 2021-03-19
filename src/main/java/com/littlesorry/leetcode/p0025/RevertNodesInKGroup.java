@@ -26,10 +26,10 @@ public class RevertNodesInKGroup {
             cur = reverseKGroup(cur, k);
             // reverse
             while (0 <= --cnt) {
-                ListNode tmp = head.next;
+                ListNode next = head.next;
                 head.next = cur;
                 cur = head;
-                head = tmp;
+                head = next;
             }
             head = cur;
         }

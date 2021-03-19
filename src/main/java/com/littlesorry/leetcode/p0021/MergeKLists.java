@@ -7,7 +7,6 @@ import java.util.PriorityQueue;
 
 public class MergeKLists {
 
-
     /**
      * better solution
      *
