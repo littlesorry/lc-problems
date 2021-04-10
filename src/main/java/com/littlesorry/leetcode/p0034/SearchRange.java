@@ -12,7 +12,7 @@ public class SearchRange {
     }
 
     public int searchLeft(int[] nums, int target, int left, int right) {
-        if (left == right) {
+        if (left >= right) {
             return nums[left] == target ? left : -1;
         }
 
@@ -20,16 +20,16 @@ public class SearchRange {
             return searchLeft(nums, target, left, (right + left) / 2);
         }
 
-        return searchLeft(nums, target, (right + left) / 2, right);
+        return searchLeft(nums, target, (right + left) / 2 + 1, right);
     }
 
     public int searchRight(int[] nums, int target, int left, int right) {
-        if (left == right) {
+        if (left >= right) {
             return nums[left] == target ? left : -1;
         }
 
         if (nums[(right + left) / 2] < target) {
-            return searchRight(nums, target, (right + left) / 2, right);
+            return searchRight(nums, target, (right + left) / 2 + 1, right);
         }
 
         return searchRight(nums, target, left, (right + left) / 2);
