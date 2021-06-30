@@ -10,6 +10,11 @@ package com.littlesorry.leetcode.p0003;
  */
 public class LongestSubstringWithoutRepeatingCharacters {
 
+    public static void main(String[] args) {
+        System.out.println(new LongestSubstringWithoutRepeatingCharacters().lengthOfLongestSubstringSlideWindow("pwwkew"));
+        System.out.println(new LongestSubstringWithoutRepeatingCharacters().lengthOfLongestSubstringSlideWindow("aaaaabcef"));
+    }
+
     public int lengthOfLongestSubstring(String s) {
         int result = 0;
         char[] chars = s.toCharArray();
@@ -38,18 +43,13 @@ public class LongestSubstringWithoutRepeatingCharacters {
         int[] charMap = new int[128];
         char[] chars = s.toCharArray();
         for (int i = 0; i < chars.length; i++) {
-            current++;
             while (charMap[chars[i]] > 0) {
-                charMap[chars[left]]--;
+                charMap[chars[left++]]--;
                 current--;
-                left++;
-            }
-
-            if (current > result) {
-                result = current;
             }
 
             charMap[chars[i]]++;
+            if (++current > result) result = current;
         }
 
         return result;
